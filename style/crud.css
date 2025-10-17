@@ -1,0 +1,42 @@
+/* Create */
+/* Read */
+.read{
+    fieldset{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+        width: 100%;
+
+        article{
+            display: flex;
+            flex-direction: row;
+            width: 90%;
+            .icon{
+                width: 24px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                margin: 0 25px 0 0;
+            }
+            .text{
+                width: 100%;
+                p, h2{
+                    text-align: start;
+                }
+            }
+        }
+
+        span{
+            background-color: var(--color-black);
+            width: 95%;
+            height: 4px;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            border-radius: 100px;
+        }
+    }
+}
+/* Update */
+/* Delete */

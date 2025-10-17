@@ -1,0 +1,254 @@
+/* Font */
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Itim&display=swap');
+
+/* Import */
+@import url('variable.css');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    /* outline: 1px solid red; */
+}
+
+/* ********************** CSS MOBILE FISRT ********************** */
+/* - - - Font - - - */
+h1, h2, h3, li a{
+    font-family: "Instrument Serif", serif;
+    /* font-weight: 400; */
+    font-style: normal;
+}
+
+p, a, li, label, input, legend, textarea{
+    font-family: "Itim", cursive;
+    /* font-weight: 400; */
+    
+}
+
+a{
+    
+    color: black;
+    text-transform: initial;
+    text-align: center;
+}
+a:hover{
+    text-decoration: none;
+}
+
+/* - - - SEPARATOR - - - */
+.separator{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+
+
+    img{
+        width: 17%;
+    }
+
+    .line{
+        background-color: var(--color-yellow);
+        width: 90%;
+        /* width: 75%; */
+        height: 5px;
+        border-radius: 100px;
+    }
+}
+
+section{
+    display: flex;
+    flex-direction: column;
+    /* text-align: justify; */
+    text-align: center;
+    align-items: center;
+    gap: 25px;
+    margin: 5%;
+
+    ul{
+        list-style: none;
+        /* align-self: flex-start;
+        text-align: left; */
+    }
+
+    h1, h2, h3, input[type="submit"]{
+        text-transform: uppercase;
+        text-align: center;
+    }
+}
+
+section .btn{
+    display: inline-block;
+    color: var(--color-cream);
+    background-color: var(--color-green);
+    padding: 15px 40px;
+    border-radius: 30px;
+    font-size: 20px;
+    align-self: center;
+    border: none;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+section .btn:hover{
+    color: var(--color-green);
+    background-color: var(--color-cream);
+}
+
+picture{
+    img{
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: auto;
+    }
+}
+
+/* - - - Fieldset - - - */
+fieldset{
+    width: 90%;
+    padding: 15px;
+    border: 3px solid black;
+    border-radius: 25px;
+    /* text-align: center; */
+
+    legend{
+        margin: auto;
+        padding: 0 25px;
+        text-transform: uppercase;
+    }
+
+    form{
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+
+
+        input:not([type="submit"]), textarea{
+            padding: 3px;
+        }
+
+        select{
+            width: 100%;
+        }
+        
+        label{
+            margin-bottom: 1px;
+            text-align: start;
+        }
+
+        .column{
+            display: flex;
+            flex-direction: column;
+        }
+
+        .checkbox{
+            text-align: start;
+        }
+    }
+}
+
+.divBtn{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 5px;
+}
+
+.forgotPassword{
+    font-size: small;
+}
+
+/* - - - oenotourisme - - - */
+.oenotourismeIcons{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+
+    div{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        img{
+            width: 15%;
+        }
+    }
+}
+
+/* - - - Actualites - - - */
+.actualites{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    article{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+
+        img{
+            width: 15%;
+        }
+    }
+}
+
+
+/* *************** CSS POUR Tablette / Ordinateur *************** */
+/* XXX plus grand ou égale à XXXpx */
+/* Tablette ≥ 426px */
+@media screen and (min-width: 426px) {
+    .separator{
+        img{
+            width: 10%;
+        }
+    }
+
+    section{
+        margin: 5% 8%;
+    }
+
+    /* - - - Actualites - - - */
+    .actualites{
+        article{
+            flex-direction: row;
+            gap: 25px;
+
+            div{
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                h2, p, a{
+                    text-align: start;
+                } 
+            }
+
+            img{
+                width: 5%;
+            }
+        }
+    }
+}
+
+/* LapTop (NoteBock) ≥ 769px */
+@media screen and (min-width: 769px) {
+    section{
+        margin: 5% 15%;
+    }
+
+    fieldset{
+            padding: 25px;
+            width: 50%;
+            form{
+                gap: 15px;
+            }
+        }
+}
+
+/* Desktop ≥ 1025px */
+@media screen and (min-width: 1025px) {
+
+}

@@ -1,0 +1,76 @@
+.bottle{
+    .imgBottle{
+        width: 45%;
+    }
+    h1{
+        padding-top: 5%;
+    }
+
+    .linkRetour{
+        position: absolute;
+        top: 80px;
+        left: 5px;
+        img{
+            width: 75%;
+        }
+    }
+
+    .gridPresentation{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        gap: 25px;
+    }
+}
+/* *************** CSS POUR Tablette / Ordinateur *************** */
+/* XXX plus grand ou égale à XXXpx */
+/* Tablette ≥ 426px */
+@media screen and (min-width: 426px) {
+    .bottle{
+        .linkRetour{
+            top: 85px;
+            left: 10px;
+            img{
+                width: 100%;
+            }
+        }
+    
+        .gridPresentation{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-auto-rows: repeat(5, 1fr);
+            padding-bottom: 5%;
+
+            .imgBottle{
+                grid-row-start:1;
+                grid-row-end: 6;
+                width: 75%;
+            }
+        }
+
+        .gridInfo{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-auto-rows: repeat(3, 1fr);
+            width: 100%;
+            height: 100%;
+            gap: 50px;
+
+            .dis{
+                grid-column-start:1;
+                grid-column-end: 3;
+            }
+        }
+    }
+}
+
+/* LapTop (NoteBock) ≥ 769px */
+@media screen and (min-width: 769px) {
+    
+}
+
+/* Desktop ≥ 1025px */
+@media screen and (min-width: 1025px) {
+
+}

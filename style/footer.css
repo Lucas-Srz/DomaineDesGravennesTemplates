@@ -1,0 +1,115 @@
+/* Import */
+@import url('variable.css');
+
+/* ********************** CSS MOBILE FISRT ********************** */
+footer{
+    background-color: var(--color-green);
+    color: var(--color-white);
+    padding: 15px 10px;
+    display: grid;
+    grid-template-columns: repeat(3, 33%);
+    grid-auto-rows: repeat(4, 25%);
+    font-size: xx-small;
+    gap: 15px 0;
+
+    a{
+        /* text-decoration: none; */
+        color: var(--color-white);
+    }
+
+    #logo{
+        grid-column: 1 / 1;
+        grid-row: 1 / 1;
+        display: flex;
+        justify-content: center;
+        img{width: 50%;}
+    }
+    #contact{
+        grid-column: 2 / 4;
+        grid-row: 1 / 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    #networkLink{
+        grid-column: 1 / 4;
+        grid-row: 2 / 2;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        a{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            img{width: 24%;}
+        }
+    }
+    #prevention{
+        grid-column: 1 / 4;
+        grid-row: 3 / 3;
+        text-align: center;
+    }
+    #websiteLink{
+        grid-column: 1 / 4;
+        grid-row: 4 / 4;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+/* *************** CSS POUR Tablette / Ordinateur *************** */
+/* XXX plus grand ou égale à XXXpx */
+/* Tablette ≥ 426px */
+@media screen and (min-width: 426px) {
+    footer{
+        font-size: small;
+    }
+}
+
+/* LapTop (NoteBock) ≥ 769px */
+@media screen and (min-width: 769px) {
+    footer{
+        grid-template-columns: repeat(3, 25% 50% 25%);
+        grid-auto-rows: repeat(3, 33%);
+        font-size: medium;
+
+        #logo{
+            grid-column: 1 / 1;
+            grid-row: 1 / 3;
+            align-items: center;
+            img{width: 35%;}
+        }
+        #contact{
+            grid-column: 2 / 2;
+            grid-row: 1 / 1;
+            align-items: center;
+        }
+        #networkLink{
+            grid-column: 2 / 2;
+            grid-row: 2 / 2;
+            a{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            img{width: 15%;}
+        }
+        }
+        #prevention{
+            grid-column: 1 / 4;
+            grid-row: 3 / 3;
+        }
+        #websiteLink{
+            grid-column: 3 / 3;
+            grid-row: 1 / 3;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: flex-start;
+        }
+    }
+}
+
+/* Desktop ≥ 1025px */
+@media screen and (min-width: 1025px) {
+
+}

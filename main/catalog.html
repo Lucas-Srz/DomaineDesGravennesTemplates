@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <title>Site test</title>
+    <!-- <link rel="shortcut icon" href="/media/icons/favicon.ico" type="image/x-icon"> -->
+    <!-- CSS -->
+    <link rel="stylesheet" href="/style/main.css">
+    <link rel="stylesheet" href="/style/navbar.css">
+    <link rel="stylesheet" href="/style/footer.css">
+    <link rel="stylesheet" href="/style/contact.css">
+    <link rel="stylesheet" href="/style/crud.css">
+    <link rel="stylesheet" href="/style/bottle.css">
+    <!-- JS -->
+    <script src="/script/navbar.js" defer></script>
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.css" />
+
+    <link rel="stylesheet" href="/style/catalog.css">
+</head>
+
+<body>
+    <nav>
+        <!-- Lien des différentes pages -->
+        <div id="navBar">
+            <ul>
+                <li id="first"><a href="/index.html">ACCUEIL</a></li>
+                <li><a href="/main/domaine.html">DOMAINE</a></li>
+                <li><a href="/main/biodiversite.html">BIODIVERSITE</a></li>
+                <li><a href="#">BOUTIQUE</a></li>
+                <li><a href="/main/catalog.html">NOS CUVEES</a></li>
+                <li><a href="/main/oenotourisme.html">OENOTOURISME</a></li>
+                <li><a href="/main/actualites.html">ACTUALITES</a></li>
+                <li><a href="/main/contact.html">CONTACT</a></li>
+            </ul>
+        </div>
+    </nav>
+    <main>
+        <section>
+            <h1 id="bottleTitle">Titre</h1>
+            <div class="section">
+                <div class="slider">
+                    <div class="swiper">
+                        <div class="swiper-wrapper">
+
+                            <div class="swiper-slide">
+                                <div class="slide-content">
+                                    <img src="/media/img/catalog/cuvee-tradition.png" alt="Bouteille tradition">
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="slide-content">
+                                    <img src="/media/img/catalog/cuvee-agape.png" alt="Bouteille agape">
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="slide-content">
+                                    <img src="/media/img/catalog/cuvee-les-frangins.png" alt="Bouteille les frangins">
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="slide-content">
+                                    <img src="/media/img/catalog/cuvee-lou-pitchoun.png" alt="Bouteille lou pitchoun">
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="slide-content">
+                                    <img src="/media/img/catalog/cuvee-terre-dhistoire.png"
+                                        alt="Bouteille terre d'histoire">
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="slide-content">
+                                    <img src="/media/img/catalog/cuvee-marie-louise.png" alt="Bouteille marie louise">
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+
+            <div>
+                <p>Domaine des Gravennes</p>
+                <p id="bottleAppellation">Appellation</p>
+                <p id="bottleColor">Couleur</p>
+            </div>
+
+            <a id="bottleLink" href="#" class="btn">Découvrir</a>
+            <p style="color: red;">Le titre, l'appellation et la couleur ne change pas. Cela est normal dans cette
+                versions, elle n'est pas dynamique.</p>
+        </section>
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.js"></script>
+    <!-- JS -->
+    <script type="text/JavaScript">
+        var swiper = new Swiper(".swiper",{
+    // Change le curseur en main
+    grabCursor:true,
+    // slidesPerView: 2.8,
+    // slidesPerView: 2,
+    spaceBetween: 0,
+    // Slide centrer // MARCHE PAS ?
+    centeredSlides:true,
+    // Mets un effect au carte
+    effect: "coverflow",
+    coverflowEffect: {
+        rotate: 0,          // pas de rotation
+        stretch: 0,         // pas d'étirement horizontal
+        depth: 200,         // profondeur (plus = effet 3D marqué)
+        modifier: 2,        // intensité de l'effet
+        slideShadows: false // pas d'ombres
+    },
+    // Boucle Auto
+    loop:true,
+    // Permet la navigation via les btns
+    navigation:{
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev"
+    },
+    // Pagination
+    pagination : {
+        el : '.swiper-pagination',
+        clickable : true,
+    },
+    // Permet la navigation via le clavier
+    keyboard:{
+        enabled:true
+    },
+    // Permet la navigation via la sourie
+    mousewheel:{
+        thresholDelta:70
+    },
+    //  Parametre pour le responsive
+    breakpoints:{
+        0:{
+            slidesPerView: 2,
+        },
+        425:{
+            // slidesPerView: 2.8,
+            slidesPerView: 2.74,
+        },
+        768:{
+            // slidesPerView: 2.8,
+            slidesPerView: 2.74,
+        },
+        1024:{
+            // slidesPerView: 2.8,
+            slidesPerView: 2.74,
+        }
+    },
+});
+    </script>
+    <footer>
+        <div id="logo">
+            <img src="/media/img/whiteLogo.png" alt="Logo du domaine des gravennes">
+        </div>
+        <div id="contact">
+            <p>Domaine des Gravennes</p>
+            <p>2933 Route de Baume, Suze-la-Rousse, France</p>
+            <p>04.75.04.84.41</p>
+        </div>
+        <div id="networkLink">
+            <a href="https://www.facebook.com/domainedesgravennes/" target="_blank">
+                <img src="/media/icons/facebook.png" alt="Logo de facebook" class="img">
+            </a>
+            <a href="https://www.instagram.com/explore/locations/835128604/" target="_blank">
+                <img src="/media/icons/instagram.png" alt="Logo d'instagram" class="img">
+            </a>
+            <a href="https://www.tripadvisor.fr/Attraction_Review-g1086386-d6997840-Reviews-Domaine_des_Gravennes-Suze_la_Rousse_Drome_Auvergne_Rhone_Alpes.html"
+                target="_blank">
+                <img src="/media/icons/tripadvisor.png" alt="Logo de tripadvisor" class="img">
+            </a>
+        </div>
+        <p id="prevention">L’abus d’alcool est dangereux pour la santé, à consommer avec modération.</p>
+        <div id="websiteLink">
+            <a href="#">Gestion des cookies</a>
+            <a href="#">Plan du site</a>
+            <a href="#">Mentions Légales</a>
+        </div>
+    </footer>
+</body>
+
+</html>
