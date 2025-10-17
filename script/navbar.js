@@ -77,12 +77,12 @@ function loadLogoNavbar(){
 
     // Ajout du lien
     addALogo = document.createElement("a");
-    addALogo.setAttribute("href","/main/index");
+    addALogo.setAttribute("href","index.html");
     addALogo.setAttribute("class","navDivImgH1");
 
     // Ajout de l'image
     addImgLogo = document.createElement("img");
-    addImgLogo.setAttribute("src","/media/img/logoGravennes.png");
+    addImgLogo.setAttribute("src","media/img/logoGravennes.png");
     addImgLogo.setAttribute("alt","Logo du site");
     addImgLogo.setAttribute("class","navImgLogo");
     addALogo.appendChild(addImgLogo);
