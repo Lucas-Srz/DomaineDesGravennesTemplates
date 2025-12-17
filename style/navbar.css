@@ -43,6 +43,7 @@ nav {
         padding: 0;
         margin: 0;
         z-index: -1;
+        margin-top: 100px;
 
         #first{
             margin-top: 80px;
@@ -156,6 +157,7 @@ nav {
             justify-content: space-evenly;
             align-items: center;
             height: 100%;
+            margin-top: 0;
 
             #first{
                 margin-top: 0;
