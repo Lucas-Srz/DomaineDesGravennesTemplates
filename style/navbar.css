@@ -23,6 +23,10 @@ nav {
         align-items: center;
         text-decoration: none;
     }
+
+    .boutique{
+        display: none;
+    }
 }
 
 #navBar {
@@ -61,6 +65,8 @@ nav {
         font-size: 1rem;
         text-decoration: none;
     }
+
+    .btq{display: flex;}
 
     #closeBtn {
         font-size: 3rem;
@@ -107,7 +113,8 @@ nav {
 /* *************** CSS POUR Tablette / Ordinateur *************** */
 /* XXX plus grand ou égale à XXXpx */
 /* Tablette ≥ 426px */
-@media screen and (min-width: 426px) {}
+@media screen and (min-width: 426px) {
+}
 
 /* LapTop (NoteBock) ≥ 769px */
 @media screen and (min-width: 769px) {
@@ -117,9 +124,32 @@ nav {
         display: none;
     }
 
+    nav{
+        .navDivImgH1{
+            width: 10%;
+            justify-content: center;
+        }
+
+        .boutique{
+            width: 10%;
+            height: 70px;
+            background-color: var(--color-yellow);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+            a{
+                text-transform: uppercase;
+                text-decoration: none;
+                color: black;
+            }
+        }
+    }
+
     #navBar {
         position: relative;
         top: 0;
+        width: 80%;
 
         ul {
             display: flex;
@@ -135,6 +165,8 @@ nav {
         li {
             padding: 0;
         }
+
+        .btq{display: none;}
     }
 
     .navImgLogo {

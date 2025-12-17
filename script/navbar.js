@@ -1,17 +1,9 @@
-console.log("navBar.js");
+var dom_navBar = document.getElementById('navBar');
+var dom_openBtn = document.getElementById('openBtn');
+var dom_closeBtn = document.getElementById('closeBtn');
+var domNav = document.getElementsByTagName("nav")[0];
 
-const DOM_NAV_BAR = document.querySelector('#navBar');
-// const DOM_OPEN_BTN = document.querySelector('#openBtn');
-// const DOM_CLOSE_BTN = document.querySelector('#closeBtn');
-const DOM_NAV = document.querySelector("nav");
-const DOM_UL = document.querySelector("ul");
-
-console.log();
-
-
-var addA, addSpanGroupe, addSpanUn, addSpanDeux, addSpanTrois, addALogo, addImgLogo;
-
-window.onload = loadLogoNavbar;
+var addA, addSpanGroupe, addSpanUn, addSpanDeux, addSpanTrois;
 
 
 function init(){
@@ -21,7 +13,7 @@ function init(){
     addA.setAttribute("href","#");
     addA.setAttribute("id","openBtn");
     addA.setAttribute("onclick","openNav()");
-    DOM_NAV.appendChild(addA);
+    domNav.appendChild(addA);
 
     addSpanGroupe = document.createElement("span");
     addSpanGroupe.setAttribute("class","burgerIconeOpen");
@@ -37,11 +29,11 @@ function init(){
     addSpanGroupe.appendChild(addSpanTrois);
 }
 
-// DOM_OPEN_BTN.onclick = openNav;
-// DOM_CLOSE_BTN.onclick = closeNav;
+// dom_openBtn.onclick = openNav;
+// dom_closeBtn.onclick = closeNav;
 
 function openNav(){
-    DOM_NAV_BAR.classList.add("active");
+    dom_navBar.classList.add("active");
 
     addA.remove();
 
@@ -49,7 +41,7 @@ function openNav(){
     addA.setAttribute("href","#");
     addA.setAttribute("id","openBtn");
     addA.setAttribute("onclick","closeNav()");
-    DOM_NAV.appendChild(addA);
+    domNav.appendChild(addA);
 
     addSpanGroupe = document.createElement("span");
     addSpanGroupe.setAttribute("class","burgerIconeClose");
@@ -65,37 +57,11 @@ function openNav(){
 }
 
 function closeNav(){
-    DOM_NAV_BAR.classList.remove("active");
+    dom_navBar.classList.remove("active");
 
     console.log("test2");
     addA.remove();
     init();
-}
-
-function loadLogoNavbar(){
-    let width = window.innerWidth; 
-
-    // Ajout du lien
-    addALogo = document.createElement("a");
-    addALogo.setAttribute("href","index.html");
-    addALogo.setAttribute("class","navDivImgH1");
-
-    // Ajout de l'image
-    addImgLogo = document.createElement("img");
-    addImgLogo.setAttribute("src","media/img/logoGravennes.png");
-    addImgLogo.setAttribute("alt","Logo du site");
-    addImgLogo.setAttribute("class","navImgLogo");
-    addALogo.appendChild(addImgLogo);
-
-    if(width <= 769){
-        DOM_NAV.prepend(addALogo);
-    } else if (width >= 770){
-        DOM_UL.insertBefore(addALogo, DOM_UL.children[4]);
-    }
-}
-
-function linkLogo(){
-
 }
 
 init();
